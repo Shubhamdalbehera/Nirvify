@@ -14,6 +14,8 @@ router.post("/add-podcast", uploadImage.single("image"), createPodcast);
 // GET request to fetch all podcasts
 router.get("/list-podcast", getPodcasts);
 
+// 
+
 // DELETE request to remove a podcast by ID
 router.delete("/:id", deletePodcast);
 

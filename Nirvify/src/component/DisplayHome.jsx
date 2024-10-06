@@ -53,7 +53,7 @@ const DisplayHome = ({ isLoggedIn }) => {
         <div className="flex overflow-auto">
           {podcastError ? (
             <p className="text-red-400">{podcastError}</p>
-          ) : Array.isArray(podcasts) && podcasts.length > 0 ? (
+          ) : Array.isArray(podcasts) && podcasts.length > 0 ? ( 
             podcasts.map((item, index) => {
               const imageUrl = `http://localhost:3000/uploads/podcast-images/${item.image
                 .split("/")

@@ -15,11 +15,11 @@ const DisplayPodcast = ({ isLoggedIn }) => {
     const fetchPodcastData = async () => {
       try {
         // Fetch the podcast details
-        const podcastResponse = await axios.get(`/api/podcasts/${id}`);
+        const podcastResponse = await axios.get(`http://localhost:3000/api/podcast/list-podcast`);
         setPodcast(podcastResponse.data.podcast);
 
         // Fetch the episodes for this podcast
-        const episodeResponse = await axios.get(`/api/podcasts/${id}/episodes`);
+        const episodeResponse = await axios.get(`http://localhost:3000/api/podcast/list-podcast`);
         setEpisodes(episodeResponse.data.episodes);
       } catch (error) {
         console.error("Error fetching podcast data:", error);
@@ -47,7 +47,7 @@ const DisplayPodcast = ({ isLoggedIn }) => {
         <div className="mt-5 flex gap-4 flex-col md:flex-row md:items-end">
           <img
             className="w-48 rounded"
-            src={`http://localhost:3000/${podcast.image}`}
+            src={`http://localhost:3000/${podcast._id}`}
             alt={podcast.name}
           />
           <div className="flex flex-col font-circular">

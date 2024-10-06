@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.3.2",
+    "mongoose": "^8.7.0",
+    "react": "^18.3.1",
+    "vite": "^5.4.8"
+  }
+}
